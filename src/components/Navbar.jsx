@@ -110,15 +110,15 @@ const Navbar = () => {
                       {item.name}
                       <HiChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
-                    <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <div className="rounded-lg">
+                    <div className="absolute top-full left-0 mt-1 w-56 bg-green-50 rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="rounded-lg space-y-1 p-1 border border-green-200">
                         {item.submenu.map((subItem, subIndex) => (
                           <Link
                             key={subIndex}
                             to={subItem.path}
                             className={`block px-4 py-3 transition-all duration-200 font-medium rounded-lg ${
                               isActivePath(subItem.path)
-                                ? "text-[#0E6C3A] bg-[#6DAA44] font-semibold"
+                                ? "text-white bg-[#6DAA44] font-semibold"
                                 : "text-[#0E6C3A] hover:text-white hover:bg-[#0E6C3A]"
                             }`}
                           >
@@ -176,7 +176,7 @@ const Navbar = () => {
           {menuItems.map((item, index) => (
             <div key={index}>
               {item.submenu ? (
-                <div>
+                <div className="space-y-1">
                   <button
                     onClick={() => toggleDropdown(index)}
                     className={`flex items-center justify-between w-full px-4 py-3 rounded-lg transition-all duration-200 font-medium ${
