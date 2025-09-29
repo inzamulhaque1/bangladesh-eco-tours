@@ -13,7 +13,7 @@ const PlacesOfInterest = () => {
         "Sadarghat waterfront - fascinating river life panorama",
         "Rickshaw capital of the world with 300,000 colorful rickshaws"
       ],
-      image: "https://images.unsplash.com/photo-1582578481740-c74e7ac4a61f?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1582555599578-5068e6474677?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "city",
       icon: Users
     },
@@ -27,7 +27,7 @@ const PlacesOfInterest = () => {
         "Thousands of spotted deer",
         "Arrive via colonial 'Rocket' paddle-wheeler"
       ],
-      image: "https://images.unsplash.com/photo-1545562342-70b8e27ec6e9?w=800&h=600&fit=crop",
+      image: "https://plus.unsplash.com/premium_photo-1686310335921-38acc0679321?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "nature",
       icon: TreePine
     },
@@ -41,7 +41,7 @@ const PlacesOfInterest = () => {
         "Shahi Jama-e-Masjid and Qadam Mubarak Mosque",
         "Ethnological Museum with tribal displays"
       ],
-      image: "https://images.unsplash.com/photo-1573459914912-990b6fa6b033?w=800&h=600&fit=crop",
+      image: "https://plus.unsplash.com/premium_photo-1661926318373-c497f78d21df?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "city",
       icon: Compass
     },
@@ -55,7 +55,7 @@ const PlacesOfInterest = () => {
         "Secluded southern beaches",
         "Tribal handloom cloth weaving"
       ],
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1619177383949-f03975e50b19?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "beach",
       icon: Waves
     },
@@ -69,7 +69,7 @@ const PlacesOfInterest = () => {
         "Well-preserved terra-cotta bas-reliefs",
         "Small museum with religious objects"
       ],
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      image: "https://i.pinimg.com/736x/41/d3/09/41d3099b07f1a79d88322d7be72a199e.jpg",
       type: "historical",
       icon: Heart
     },
@@ -83,7 +83,7 @@ const PlacesOfInterest = () => {
         "Walk around island in few hours",
         "Local fishing community"
       ],
-      image: "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1516091877740-fde016699f2c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       type: "island",
       icon: Waves
     },
@@ -97,7 +97,7 @@ const PlacesOfInterest = () => {
         "Traditional tribal kings and village headmen",
         "Pristine foothill ecological environment"
       ],
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      image: "https://media.istockphoto.com/id/1742541672/photo/beauty-of-kaptai-lake.jpg?s=612x612&w=0&k=20&c=w_gTa3eVOi_ipva40KcZbYOYI2IQn0UqEcwI9PjeqUQ=",
       type: "hills",
       icon: Mountain
     },
@@ -111,7 +111,7 @@ const PlacesOfInterest = () => {
         "Chakma tribal area",
         "Boating and swimming opportunities"
       ],
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=600&fit=crop",
+      image: "https://media.istockphoto.com/id/1387035707/photo/sunset-moment-on-kapatai-lake-rangamati-bangladesh.jpg?s=612x612&w=0&k=20&c=7VYpykcLLGK4MEyMtK28BuMPKKV-nXzIrMeDPlhuzyY=",
       type: "lake",
       icon: Waves
     },
@@ -125,7 +125,7 @@ const PlacesOfInterest = () => {
         "Weekly Tuesday tribal market",
         "Buddhist water festival every April"
       ],
-      image: "https://images.unsplash.com/photo-1464822759849-e41ac67e5d73?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFuZGFyYmFuJTJDJTIwYmFuZ2xhZGVzaHxlbnwwfHwwfHx8MA%3D%3D",
       type: "hills",
       icon: Mountain
     },
@@ -139,7 +139,7 @@ const PlacesOfInterest = () => {
         "Ecolodge and tribal homestays",
         "Tripuri, Tanchangya, Marma and Mru villages"
       ],
-      image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&h=600&fit=crop",
+      image: "https://live.staticflickr.com/65535/52538994631_e321761d58.jpg",
       type: "village",
       icon: Users
     }
@@ -167,7 +167,7 @@ const PlacesOfInterest = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-20"
             style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop')" 
+              backgroundImage: "url('https://images.pexels.com/photos/122107/pexels-photo-122107.jpeg')" 
             }}
           />
         </div>
@@ -295,7 +295,7 @@ const PlacesOfInterest = () => {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1545562342-70b8e27ec6e9?w=800&h=600&fit=crop"
+                  src="https://images.unsplash.com/photo-1706459671568-9809c9d13430?q=80&w=1265&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Sundarban Mangroves"
                   className="w-full h-96 object-cover"
                 />
@@ -379,7 +379,7 @@ const PlacesOfInterest = () => {
             <div className="order-1 lg:order-2 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573459914912-990b6fa6b033?w=800&h=600&fit=crop"
+                  src="https://images.unsplash.com/photo-1703944718960-49e1170a9c10?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Chittagong"
                   className="w-full h-96 object-cover"
                 />

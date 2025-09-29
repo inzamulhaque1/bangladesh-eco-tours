@@ -27,7 +27,7 @@ const Navbar = () => {
       submenu: [
         { name: "About Us", path: "/about-us" },
         { name: "Places of Interest", path: "/places" },
-        { name: "Visa Information", path: "/visa" },
+        { name: "Visa Information", path: "/visa-info" },
       ],
     },
     { name: "Bangladesh", path: "/bangladesh" },
