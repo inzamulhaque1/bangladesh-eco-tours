@@ -122,7 +122,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="relative h-screen overflow-hidden bg-black mt-16 md:mt-0">
+    <div className="relative h-screen overflow-hidden bg-black ">
       {/* Background Images with Parallax Effect */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (

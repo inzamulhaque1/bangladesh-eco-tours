@@ -160,9 +160,9 @@ const PlacesOfInterest = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50 pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-28 bg-gradient-to-r from-[#6DAA44] to-green-600 text-white overflow-hidden">
+      <section className="relative py-12 md:py-20 lg:py-28 bg-gradient-to-r from-[#6DAA44] to-green-600 text-white overflow-hidden">
         <div className="absolute inset-0">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -173,59 +173,59 @@ const PlacesOfInterest = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block bg-white/20 backdrop-blur-lg px-6 py-3 rounded-full mb-6 border border-white/30">
-            <span className="text-green-100 font-semibold">🌍 EXPLORE BANGLADESH</span>
+          <div className="inline-block bg-white/20 backdrop-blur-lg px-4 py-2 md:px-6 md:py-3 rounded-full mb-4 md:mb-6 border border-white/30">
+            <span className="text-green-100 font-semibold text-sm md:text-base">🌍 EXPLORE BANGLADESH</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-4 md:mb-6">
             Places of
-            <span className="block text-white mt-2">Interest</span>
+            <span className="block text-white mt-1 md:mt-2">Interest</span>
           </h1>
           
-          <p className="text-xl lg:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed px-4">
             Discover the diverse landscapes, rich culture, and hidden gems of Bangladesh - 
             from bustling cities to pristine natural wonders and tribal communities
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12">
-            <div className="bg-white/20 backdrop-blur-lg px-6 py-4 rounded-2xl border border-white/30">
-              <div className="text-2xl font-bold">10+</div>
-              <div className="text-sm text-green-100">Unique Destinations</div>
+          <div className="hidden md:flex flex-wrap justify-center gap-4 md:gap-6 mt-8 md:mt-12 px-4">
+            <div className="bg-white/20 backdrop-blur-lg px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border border-white/30">
+              <div className="text-xl md:text-2xl font-bold">10+</div>
+              <div className="text-xs md:text-sm text-green-100">Unique Destinations</div>
             </div>
-            <div className="bg-white/20 backdrop-blur-lg px-6 py-4 rounded-2xl border border-white/30">
-              <div className="text-2xl font-bold">14</div>
-              <div className="text-sm text-green-100">Tribal Communities</div>
+            <div className="bg-white/20 backdrop-blur-lg px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border border-white/30">
+              <div className="text-xl md:text-2xl font-bold">14</div>
+              <div className="text-xs md:text-sm text-green-100">Tribal Communities</div>
             </div>
-            <div className="bg-white/20 backdrop-blur-lg px-6 py-4 rounded-2xl border border-white/30">
-              <div className="text-2xl font-bold">100%</div>
-              <div className="text-sm text-green-100">Authentic Experiences</div>
+            <div className="bg-white/20 backdrop-blur-lg px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border border-white/30">
+              <div className="text-xl md:text-2xl font-bold">100%</div>
+              <div className="text-xs md:text-sm text-green-100">Authentic Experiences</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Places Grid */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 mb-4 md:mb-6">
               Discover <span className="text-[#6DAA44]">Bangladesh</span>
             </h2>
-            <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               From the world's largest mangrove forest to ancient Buddhist monasteries and tribal hill tracts, 
               Bangladesh offers unparalleled diversity for the adventurous traveler
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {places.map((place) => (
               <div 
                 key={place.id}
-                className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col"
+                className="group bg-white rounded-xl md:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col"
               >
                 {/* Image */}
-                <div className="relative h-48 lg:h-56 overflow-hidden flex-shrink-0">
+                <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden flex-shrink-0">
                   <img
                     src={place.image}
                     alt={place.name}
@@ -234,50 +234,50 @@ const PlacesOfInterest = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
                   {/* Type Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(place.type)}`}>
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                    <span className={`px-2 py-1 md:px-3 md:py-1 rounded-full text-xs font-semibold ${getTypeColor(place.type)}`}>
                       {place.type.toUpperCase()}
                     </span>
                   </div>
                   
                   {/* Icon */}
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center">
-                    <place.icon className="text-white" size={20} />
+                  <div className="absolute top-3 right-3 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-lg rounded-full flex items-center justify-center">
+                    <place.icon className="text-white" size={16} />
                   </div>
                   
                   {/* Title */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl lg:text-2xl font-bold text-white">{place.name}</h3>
+                  <div className="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white">{place.name}</h3>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 lg:p-8 flex-1 flex flex-col">
-                  <p className="text-gray-600 leading-relaxed mb-4 text-sm lg:text-base flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex-1 flex flex-col">
+                  <p className="text-gray-600 leading-relaxed mb-3 md:mb-4 text-sm md:text-base flex-1">
                     {place.description}
                   </p>
                   
-                  <div className="space-y-3 mb-6">
-                    <h4 className="font-semibold text-gray-800 flex items-center gap-2">
-                      <MapPin className="text-[#6DAA44]" size={16} />
+                  <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                    <h4 className="font-semibold text-gray-800 flex items-center gap-2 text-sm md:text-base">
+                      <MapPin className="text-[#6DAA44]" size={14} />
                       Highlights:
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1 md:space-y-2">
                       {place.highlights.slice(0, 3).map((highlight, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-[#6DAA44] rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-600 leading-relaxed">{highlight}</span>
+                          <div className="w-1.5 h-1.5 bg-[#6DAA44] rounded-full mt-1.5 md:mt-2 flex-shrink-0" />
+                          <span className="text-xs md:text-sm text-gray-600 leading-relaxed">{highlight}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* CTA Button - Fixed at bottom */}
-                  <div className="mt-auto pt-4 border-t border-gray-100">
-                    <button className="w-full bg-[#6DAA44] text-white py-3 px-4 rounded-xl font-semibold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                      <Compass size={18} />
+                  <div className="mt-auto pt-3 md:pt-4 border-t border-gray-100">
+                    <button className="w-full bg-[#6DAA44] text-white py-2 md:py-3 px-3 md:px-4 rounded-lg md:rounded-xl font-semibold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                      <Compass size={16} />
                       Explore {place.name.split(' ')[0]}
-                      <ArrowRight size={16} />
+                      <ArrowRight size={14} />
                     </button>
                   </div>
                 </div>
@@ -288,105 +288,105 @@ const PlacesOfInterest = () => {
       </section>
 
       {/* Special Focus Sections */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Sundarban Focus */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-20">
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1706459671568-9809c9d13430?q=80&w=1265&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Sundarban Mangroves"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#6DAA44] text-white rounded-2xl p-6 shadow-2xl">
-                <div className="text-2xl font-black">#1</div>
-                <div className="text-sm font-semibold">Largest Mangrove</div>
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-[#6DAA44] text-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl md:shadow-2xl">
+                <div className="text-xl md:text-2xl font-black">#1</div>
+                <div className="text-xs md:text-sm font-semibold">Largest Mangrove</div>
                 <div className="text-xs text-green-100">In the World</div>
               </div>
             </div>
             
-            <div>
-              <div className="inline-block bg-[#6DAA44]/10 px-4 py-2 rounded-full mb-4">
-                <span className="text-[#6DAA44] font-semibold">NATURE WONDER</span>
+            <div className="mt-8 lg:mt-0">
+              <div className="inline-block bg-[#6DAA44]/10 px-3 py-1 md:px-4 md:py-2 rounded-full mb-3 md:mb-4">
+                <span className="text-[#6DAA44] font-semibold text-sm md:text-base">NATURE WONDER</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 mb-4 md:mb-6">
                 Explore <span className="text-[#6DAA44]">SUNDARBAN MANGROVES</span>
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
                 The Sundarbans are the largest mangrove forest in the world, stretching 80km into the 
                 Bangladeshi hinterland from the coast. Home to the Royal Bengal tiger and countless 
                 species of wildlife.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <TreePine className="text-[#6DAA44]" size={20} />
-                  <span className="font-semibold text-gray-800">38,500 sq. km</span>
+              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <TreePine className="text-[#6DAA44]" size={18} />
+                  <span className="font-semibold text-gray-800 text-sm md:text-base">38,500 sq. km</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Users className="text-[#6DAA44]" size={20} />
-                  <span className="font-semibold text-gray-800">400+ Tigers</span>
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Users className="text-[#6DAA44]" size={18} />
+                  <span className="font-semibold text-gray-800 text-sm md:text-base">400+ Tigers</span>
                 </div>
               </div>
 
-              <button className="bg-[#6DAA44] text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
-                <Compass size={20} />
+              <button className="bg-[#6DAA44] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-2 md:gap-3 text-sm md:text-base">
+                <Compass size={18} />
                 Discover Sundarbans
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </button>
             </div>
           </div>
 
           {/* Chittagong Focus */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-block bg-[#6DAA44]/10 px-4 py-2 rounded-full mb-4">
-                <span className="text-[#6DAA44] font-semibold">COASTAL CITY</span>
+              <div className="inline-block bg-[#6DAA44]/10 px-3 py-1 md:px-4 md:py-2 rounded-full mb-3 md:mb-4">
+                <span className="text-[#6DAA44] font-semibold text-sm md:text-base">COASTAL CITY</span>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 mb-4 md:mb-6">
                 Explore <span className="text-[#6DAA44]">CHITTAGONG</span>
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
                 The second largest city in Bangladesh sits on the bank of the Karnaphuli River with 
                 an interesting old waterfront area that reflects the importance of river trade to 
                 the city's growth and history.
               </p>
 
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-[#6DAA44]" size={20} />
-                  <span className="font-semibold text-gray-800">Sadarghat Waterfront</span>
+              <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <MapPin className="text-[#6DAA44]" size={18} />
+                  <span className="font-semibold text-gray-800 text-sm md:text-base">Sadarghat Waterfront</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Heart className="text-[#6DAA44]" size={20} />
-                  <span className="font-semibold text-gray-800">Portuguese Heritage</span>
+                <div className="flex items-center gap-2 md:gap-3">
+                  <Heart className="text-[#6DAA44]" size={18} />
+                  <span className="font-semibold text-gray-800 text-sm md:text-base">Portuguese Heritage</span>
                 </div>
               </div>
 
-              <button className="bg-[#6DAA44] text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
-                <Camera size={20} />
+              <button className="bg-[#6DAA44] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-2 md:gap-3 text-sm md:text-base">
+                <Camera size={18} />
                 Explore Chittagong
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </button>
             </div>
 
-            <div className="order-1 lg:order-2 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="order-1 lg:order-2 relative mb-8 lg:mb-0">
+              <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1703944718960-49e1170a9c10?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Chittagong"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#6DAA44] text-white rounded-2xl p-6 shadow-2xl">
-                <div className="text-2xl font-black">#2</div>
-                <div className="text-sm font-semibold">Largest Port</div>
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-[#6DAA44] text-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl md:shadow-2xl">
+                <div className="text-xl md:text-2xl font-black">#2</div>
+                <div className="text-xs md:text-sm font-semibold">Largest Port</div>
                 <div className="text-xs text-green-100">In Bangladesh</div>
               </div>
             </div>
@@ -395,31 +395,31 @@ const PlacesOfInterest = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 lg:py-24 bg-gray-900 text-white">
+      <section className="py-12 md:py-16 lg:py-24 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
             Ready to Explore?
           </h2>
           
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
             Join us on an unforgettable journey through Bangladesh's most fascinating destinations. 
             Experience authentic culture, pristine nature, and warm hospitality.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#6DAA44] text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-3 justify-center">
-              <Compass size={20} />
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <button className="bg-[#6DAA44] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-2 md:gap-3 justify-center text-sm md:text-base">
+              <Compass size={18} />
               Start Your Adventure
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </button>
             
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 flex items-center gap-3 justify-center">
-              <Camera size={20} />
+            <button className="border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 flex items-center gap-2 md:gap-3 justify-center text-sm md:text-base">
+              <Camera size={18} />
               View All Tours
             </button>
           </div>
           
-          <p className="text-gray-400 mt-6 text-sm">
+          <p className="text-gray-400 mt-4 md:mt-6 text-xs md:text-sm">
             Custom tours available • Small groups • Expert local guides • Sustainable tourism
           </p>
         </div>
