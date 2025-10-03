@@ -123,7 +123,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Slide-out Navigation Menu - with proper z-index */}
+      {/* Slide-out Navigation Menu - 1 with proper z-index */}
       <div
         className={`fixed inset-0 z-[60] transition-all duration-500 ease-in-out ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
