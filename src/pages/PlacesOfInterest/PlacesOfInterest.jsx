@@ -160,7 +160,7 @@ const PlacesOfInterest = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50 pt-16 md:pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50 pt-16 md:pt-20 font-ubuntu">
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 lg:py-28 bg-gradient-to-r from-[#6DAA44] to-green-600 text-white overflow-hidden">
         <div className="absolute inset-0">

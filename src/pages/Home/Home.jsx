@@ -6,7 +6,7 @@ import DiscoverSection from './section/DiscoverSection';
 
 const Home = () => {
     return (
-        <div>
+        <div className='font-roboto'>
             <Slider></Slider>
             <ExoticTravelSection></ExoticTravelSection>
             <CommunityEcotourism></CommunityEcotourism>

@@ -82,7 +82,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white font-rubik">
       
 
       {/* Dynamic Hero Section */}

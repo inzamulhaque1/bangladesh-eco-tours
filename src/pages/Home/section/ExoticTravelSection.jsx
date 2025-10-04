@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   HiLocationMarker, 
@@ -8,13 +7,28 @@ import {
   HiChevronRight,
   HiSparkles,
   HiHeart,
-  HiEye
+  HiEye,
+  HiMenu,
+  HiX
 } from 'react-icons/hi';
 
 const ExoticTravelSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
+
+  // Check for mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -24,7 +38,7 @@ const ExoticTravelSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -78,20 +92,20 @@ const ExoticTravelSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-green-50 overflow-hidden"
+      className="relative py-12 md:py-16 lg:py-20 xl:py-32 bg-gradient-to-br from-gray-50 via-white to-green-50 overflow-hidden font-roboto"
     >
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements - Reduced on mobile */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-10 animate-pulse"
+        <div className="absolute -top-20 -right-20 md:-top-40 md:-right-40 w-40 h-40 md:w-80 md:h-80 rounded-full opacity-10 animate-pulse"
              style={{ backgroundColor: '#6DAA44' }}></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full opacity-5 animate-bounce"
+        <div className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40 w-48 h-48 md:w-96 md:h-96 rounded-full opacity-5 animate-bounce"
              style={{ backgroundColor: '#6DAA44', animationDuration: '6s' }}></div>
         
-        {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {/* Floating Particles - Reduced count on mobile */}
+        {[...Array(isMobile ? 10 : 20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 rounded-full opacity-20 animate-float"
+            className="absolute w-1 h-1 md:w-2 md:h-2 rounded-full opacity-20 animate-float"
             style={{
               backgroundColor: '#6DAA44',
               left: `${Math.random() * 100}%`,
@@ -106,34 +120,34 @@ const ExoticTravelSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
           {/* Left Content */}
-          <div className={`space-y-8 transform transition-all duration-1000 ${
+          <div className={`space-y-6 md:space-y-8 transform transition-all duration-1000 ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
           }`}>
             
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white rounded-full px-6 py-3 shadow-lg border border-green-100">
-              <HiSparkles className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-semibold text-gray-700">Discover The Undiscovered</span>
+            <div className="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-2 md:px-6 md:py-3 shadow-lg border border-green-100">
+              <HiSparkles className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
+              <span className="text-xs md:text-sm font-semibold text-gray-700">Discover The Undiscovered</span>
             </div>
 
             {/* Main Heading */}
-            <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                <span className="block">EXOTIC TRAVEL &</span>
+            <div className="space-y-3 md:space-y-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl">EXOTIC TRAVEL &</span>
                 <span 
-                  className="block bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
+                  className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent"
                   style={{ color: '#6DAA44' }}
                 >
                   ADVENTURES
                 </span>
-                <span className="block">IN BANGLADESH</span>
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl">IN BANGLADESH</span>
               </h2>
               
               {/* Animated Underline */}
-              <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transform origin-left transition-transform duration-1000"
+              <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transform origin-left transition-transform duration-1000"
                    style={{ 
                      backgroundColor: '#6DAA44',
                      transform: isVisible ? 'scaleX(1)' : 'scaleX(0)'
@@ -141,7 +155,7 @@ const ExoticTravelSection = () => {
             </div>
 
             {/* Description */}
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
               <p className="transform transition-all duration-1000 delay-300"
                  style={{ 
                    transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
@@ -168,19 +182,19 @@ const ExoticTravelSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-              <button className="group relative px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-green-200 overflow-hidden">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 md:space-x-4 pt-2 md:pt-4">
+              <button className="group relative px-6 py-3 md:px-8 md:py-4 bg-white text-gray-900 font-semibold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-green-200 overflow-hidden text-sm md:text-base">
                 <span className="relative z-10 flex items-center justify-center">
-                  <HiEye className="w-5 h-5 mr-2" />
+                  <HiEye className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                   Explore Now
-                  <HiChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  <HiChevronRight className="w-3 h-3 md:w-4 md:h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                      style={{ backgroundColor: '#6DAA44' }}></div>
                 <div className="absolute inset-0 bg-white group-hover:bg-opacity-0 transition-all duration-300"></div>
               </button>
               
-              <button className="px-8 py-4 bg-transparent text-green-600 font-semibold rounded-xl border-2 border-green-200 hover:bg-green-50 transform hover:-translate-y-1 transition-all duration-300 hover:border-green-300">
+              <button className="px-6 py-3 md:px-8 md:py-4 bg-transparent text-green-600 font-semibold rounded-xl border-2 border-green-200 hover:bg-green-50 transform hover:-translate-y-1 transition-all duration-300 hover:border-green-300 text-sm md:text-base">
                 Learn More
               </button>
             </div>
@@ -192,37 +206,38 @@ const ExoticTravelSection = () => {
           }`}>
             
             {/* Feature Cards Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`group relative p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-2 cursor-pointer border border-gray-100 hover:border-green-200 ${
+                  className={`group relative p-4 sm:p-5 md:p-6 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 cursor-pointer border border-gray-100 hover:border-green-200 ${
                     activeCard === index ? 'scale-105 shadow-2xl border-green-300' : ''
                   }`}
-                  onMouseEnter={() => setActiveCard(index)}
-                  onMouseLeave={() => setActiveCard(null)}
+                  onMouseEnter={() => !isMobile && setActiveCard(index)}
+                  onMouseLeave={() => !isMobile && setActiveCard(null)}
+                  onTouchStart={() => isMobile && setActiveCard(activeCard === index ? null : index)}
                   style={{
                     animationDelay: `${index * 200}ms`
                   }}
                 >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 rounded-xl md:rounded-2xl transition-opacity duration-500`}></div>
                   
                   {/* Icon or Image */}
-                  <div className="relative mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 overflow-hidden"
+                  <div className="relative mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 overflow-hidden"
                          style={{ backgroundColor: activeCard === index ? '#6DAA44' : undefined }}>
                       {feature.useIcon ? (
                         <feature.icon 
-                          className={`w-6 h-6 transition-colors duration-300 ${
+                          className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-colors duration-300 ${
                             activeCard === index ? 'text-white' : 'text-green-600'
                           }`} 
                         />
                       ) : (
                         <img 
                           src={feature.image}
-                          alt="Bangladesh Flag"
-                          className="w-8 h-6 object-contain transition-all duration-300"
+                          alt={feature.title}
+                          className="w-6 h-4 sm:w-7 sm:h-5 md:w-8 md:h-6 object-contain transition-all duration-300"
                           style={{
                             filter: activeCard === index ? 'brightness(1.2) contrast(1.1)' : 'none'
                           }}
@@ -232,15 +247,15 @@ const ExoticTravelSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-green-700 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-xs sm:text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-tight">
                     {feature.description}
                   </p>
 
                   {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                  <div className="absolute inset-0 rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"
                        style={{
                          background: `radial-gradient(circle at center, #6DAA44 0%, transparent 70%)`
                        }}></div>
@@ -249,20 +264,20 @@ const ExoticTravelSection = () => {
             </div>
 
             {/* Stats Section */}
-            <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+                  className="text-center p-3 sm:p-4 bg-white rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 border border-gray-100"
                   style={{
                     animationDelay: `${1000 + index * 100}ms`
                   }}
                 >
-                  <stat.icon className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                  <div className="text-2xl font-bold text-gray-900" style={{ color: '#6DAA44' }}>
+                  <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mx-auto mb-1 sm:mb-2 text-green-600" />
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900" style={{ color: '#6DAA44' }}>
                     {stat.number}
                   </div>
-                  <div className="text-xs text-gray-600 font-medium">
+                  <div className="text-xs text-gray-600 font-medium leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -291,6 +306,20 @@ const ExoticTravelSection = () => {
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 475px) {
+          .xs\\:grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        /* Touch device improvements */
+        @media (hover: none) and (pointer: coarse) {
+          .hover\\:-translate-y-2:hover {
+            transform: translateY(0);
+          }
         }
       `}</style>
     </section>

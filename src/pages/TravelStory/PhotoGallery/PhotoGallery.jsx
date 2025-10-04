@@ -13,140 +13,204 @@ const PhotoGallery = () => {
   const imagesPerPage = 12;
 
   // Enhanced sample images with more details
-  const allImages = [
-    {
-      id: 1,
-      url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Hill Tribe Village Sunrise",
-      category: "Cultural",
-      photographer: "H M Kabir Kanak",
-      location: "Chittagong Hill Tracts",
-      tags: ["village", "sunrise", "traditional", "mountains"],
-      likes: 142,
-      date: "2024-01-15"
-    },
-    {
-      id: 2,
-      url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
-      title: "Pristine Beach Sunset",
-      category: "Beach",
-      photographer: "Jahangir Alam",
-      location: "Cox's Bazar",
-      tags: ["beach", "sunset", "ocean", "waves"],
-      likes: 98,
-      date: "2024-02-20"
-    },
-    {
-      id: 3,
-      url: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Traditional Dance Festival",
-      category: "Cultural",
-      photographer: "Mostafa Chowdhury",
-      location: "Bandarban",
-      tags: ["dance", "festival", "colorful", "celebration"],
-      likes: 215,
-      date: "2024-03-10"
-    },
-    {
-      id: 4,
-      url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Mangrove Forest Mystique",
-      category: "Nature",
-      photographer: "H M Kabir Kanak",
-      location: "Sundarbans",
-      tags: ["mangrove", "forest", "wildlife", "river"],
-      likes: 167,
-      date: "2024-01-28"
-    },
-    {
-      id: 5,
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80",
-      title: "Tea Plantations Morning",
-      category: "Landscape",
-      photographer: "Jahangir Alam",
-      location: "Sylhet",
-      tags: ["tea", "plantation", "green", "hills"],
-      likes: 134,
-      date: "2024-02-14"
-    },
-    {
-      id: 6,
-      url: "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Ancient Temple Architecture",
-      category: "Heritage",
-      photographer: "Mostafa Chowdhury",
-      location: "Paharpur",
-      tags: ["temple", "ancient", "architecture", "history"],
-      likes: 189,
-      date: "2024-03-05"
-    },
-    {
-      id: 7,
-      url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "River Cruise Adventure",
-      category: "Adventure",
-      photographer: "H M Kabir Kanak",
-      location: "Sangu River",
-      tags: ["river", "boat", "adventure", "water"],
-      likes: 156,
-      date: "2024-01-22"
-    },
-    {
-      id: 8,
-      url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
-      title: "Golden Sunset Islands",
-      category: "Beach",
-      photographer: "Jahangir Alam",
-      location: "St. Martin's Island",
-      tags: ["island", "sunset", "golden", "beach"],
-      likes: 178,
-      date: "2024-02-18"
-    },
-    {
-      id: 9,
-      url: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Tribal Crafts Workshop",
-      category: "Cultural",
-      photographer: "Mostafa Chowdhury",
-      location: "Rangamati",
-      tags: ["crafts", "workshop", "traditional", "artisan"],
-      likes: 123,
-      date: "2024-03-12"
-    },
-    {
-      id: 10,
-      url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Wildlife Safari Moment",
-      category: "Wildlife",
-      photographer: "H M Kabir Kanak",
-      location: "Sundarbans",
-      tags: ["wildlife", "safari", "nature", "animals"],
-      likes: 201,
-      date: "2024-01-30"
-    },
-    {
-      id: 11,
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80",
-      title: "Mountain Trekking Path",
-      category: "Adventure",
-      photographer: "Jahangir Alam",
-      location: "Bandarban",
-      tags: ["mountain", "trekking", "hiking", "adventure"],
-      likes: 145,
-      date: "2024-02-25"
-    },
-    {
-      id: 12,
-      url: "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Traditional Festival Colors",
-      category: "Cultural",
-      photographer: "Mostafa Chowdhury",
-      location: "Dhaka",
-      tags: ["festival", "colors", "celebration", "culture"],
-      likes: 198,
-      date: "2024-03-08"
-    },
-  ];
+const allImages = [
+  {
+    id: 1,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/florafuna.jpg",
+  },
+  {
+    id: 2,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/sangsadbaban.jpg",
+  },
+  {
+    id: 3,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/street-child.jpg",
+  },
+  {
+    id: 4,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG1.jpg",
+  },
+  {
+    id: 5,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG3.jpg",
+  },
+  {
+    id: 6,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG4.jpg",
+  },
+  {
+    id: 7,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG5.jpg",
+  },
+  {
+    id: 8,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/Heritage.jpg",
+  },
+  {
+    id: 9,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG6.jpg",
+  },
+  {
+    id: 10,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/GramBangla.jpg",
+  },
+  {
+    id: 11,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG7.jpg",
+  },
+  {
+    id: 12,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG8.jpg",
+  },
+  {
+    id: 13,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG9.jpg",
+  },
+  {
+    id: 14,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG2.jpg",
+  },
+  {
+    id: 15,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG10.jpg",
+  },
+  {
+    id: 16,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG11.jpg",
+  },
+  {
+    id: 17,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG13.jpg",
+  },
+  {
+    id: 18,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG14.jpg",
+  },
+  {
+    id: 19,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG15.jpg",
+  },
+  {
+    id: 20,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG16.jpg",
+  },
+  {
+    id: 21,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG17.jpg",
+  },
+  {
+    id: 22,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG18.jpg",
+  },
+  {
+    id: 23,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/02/photoG12.jpg",
+  },
+  {
+    id: 24,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET1.jpg",
+  },
+  {
+    id: 25,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET2.jpg",
+  },
+  {
+    id: 26,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET3.jpg",
+  },
+  {
+    id: 27,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET4.jpg",
+  },
+  {
+    id: 28,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET5.jpg",
+  },
+  {
+    id: 29,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET6.jpg",
+  },
+  {
+    id: 30,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET7.jpg",
+  },
+  {
+    id: 31,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET8.jpg",
+  },
+  {
+    id: 32,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET9.jpg",
+  },
+  {
+    id: 33,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/gallery-BET10.jpg",
+  },
+  {
+    id: 34,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/face-of-Bangladesh-2.jpg",
+  },
+  {
+    id: 35,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-PE-12A-0012.jpg",
+  },
+  {
+    id: 36,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-CR-01-0036.jpg",
+  },
+  {
+    id: 37,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-TN-05-0010.jpg",
+  },
+  {
+    id: 38,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-PE-12J-0009.jpg",
+  },
+  {
+    id: 39,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-PE-12E-0023.jpg",
+  },
+  {
+    id: 40,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-PE-12A-0112.jpg",
+  },
+  {
+    id: 41,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/BG-PE-12A-0038.jpg",
+  },
+  {
+    id: 42,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/Drying-the-Rice.jpg",
+  },
+  {
+    id: 43,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/Hindu-Temple-Putia-Rajshahi.jpg",
+  },
+  {
+    id: 44,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/Kuthubari.jpg",
+  },
+  {
+    id: 45,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/Lalan-Shah-Mosuleum.jpg",
+  },
+  {
+    id: 46,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/04/Lalbagh-Fort-Old-Dhaka.jpg",
+  },
+  {
+    id: 47,
+    url: "https://bangladeshecotours.com/wp-content/uploads/2018/03/people.jpg",
+  },
+  {
+    id: 48,
+    url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
+  },
+  {
+    id: 49,
+    url: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  }
+];
 
   const categories = [
     { name: "All", icon: "🌍", count: allImages.length },
@@ -340,36 +404,7 @@ const PhotoGallery = () => {
                 />
               </div>
               
-              {/* Enhanced Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 leading-tight">{image.title}</h3>
-                  <div className="flex items-center justify-between text-xs sm:text-sm mb-2 sm:mb-3">
-                    <span className="bg-[#6DAA44] px-2 sm:px-3 py-1 rounded-full font-semibold">
-                      {image.category}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      ❤️ {image.likes}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between text-xs text-gray-300">
-                    <span>by {image.photographer}</span>
-                    <span className="text-right">{image.location}</span>
-                  </div>
-                </div>
-
-                {/* Enhanced Hover Actions */}
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
-                  <div className="bg-black/50 text-white p-1 sm:p-2 rounded-full backdrop-blur-sm transform translate-x-4 group-hover:translate-x-0 transition-transform duration-300">
-                    <FaExpand className="text-sm sm:text-base" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Quick Info Badge */}
-              <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-white/90 backdrop-blur-sm text-gray-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
-                {image.category}
-              </div>
+          
             </div>
           ))}
         </div>

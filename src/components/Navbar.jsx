@@ -83,7 +83,7 @@ const Navbar = () => {
     <>
       {/* Main Navbar - Always visible */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-alan ${
           scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
         }`}
       >
@@ -125,7 +125,7 @@ const Navbar = () => {
 
       {/* Slide-out Navigation Menu - 1 with proper z-index */}
       <div
-        className={`fixed inset-0 z-[60] transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 z-[60] transition-all duration-500 ease-in-out font-alan ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
