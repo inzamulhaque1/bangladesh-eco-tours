@@ -150,7 +150,7 @@ const Navbar = () => {
           onClick={closeAllMenus}
         />
 
-        {/* Navigation Panel --- Full height on mobile */}
+        {/* Navigation Panel -Full height on mobile */}
         <div
           className={`absolute top-0 left-0 h-full w-80 lg:w-96 bg-white shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col ${
             isOpen ? "translate-x-0" : "translate-x-full"
