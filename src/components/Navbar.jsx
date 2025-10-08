@@ -136,7 +136,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Slide-out Navigation Menu - Fixed for mobile */}
+      {/* Slide-out Navigation Menu Fixed for mobile */}
       <div
         className={`fixed inset-0 z-[60] transition-all duration-500 ease-in-out font-alan ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -150,7 +150,7 @@ const Navbar = () => {
           onClick={closeAllMenus}
         />
 
-        {/* Navigation Panel -Full height on mobile */}
+        {/* Navigation Panel Full height on mobile */}
         <div
           className={`absolute top-0 left-0 h-full w-80 lg:w-96 bg-white shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col ${
             isOpen ? "translate-x-0" : "translate-x-full"
