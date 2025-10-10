@@ -173,7 +173,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Navigation Items - Flexible scrollable area */}
+          {/* Navigation Items - Flexible scrollable */}
           <div className="flex-1 overflow-y-auto py-2">
             <div className="px-4 lg:px-6 space-y-1">
               {menuItems.map((item, index) => (
